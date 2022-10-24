@@ -840,6 +840,10 @@ module Raw {
 
   class RegexLiteralExpr extends @regex_literal_expr, LiteralExpr {
     override string toString() { result = "RegexLiteralExpr" }
+
+    string getPattern() { regex_literal_exprs(this, result, _) }
+
+    int getVersion() { regex_literal_exprs(this, _, result) }
   }
 
   class ReifyPackExpr extends @reify_pack_expr, ImplicitConversionExpr {

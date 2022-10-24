@@ -618,4 +618,11 @@ codeql::UnresolvedPatternExpr ExprVisitor::translateUnresolvedPatternExpr(
   entry.sub_pattern = dispatcher_.fetchLabel(expr.getSubPattern());
   return entry;
 }
+codeql::RegexLiteralExpr ExprVisitor::translateRegexLiteralExpr(
+    const swift::RegexLiteralExpr& expr) {
+  auto entry = dispatcher_.createEntry(expr);
+  entry.pattern = expr.getRegexText().str();
+  entry.version = expr.getVersion();
+  return entry;
+}
 }  // namespace codeql

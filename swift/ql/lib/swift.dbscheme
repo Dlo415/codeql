@@ -1302,7 +1302,9 @@ protocol_metatype_to_object_exprs(  //dir=expr
 );
 
 regex_literal_exprs(  //dir=expr
-  unique int id: @regex_literal_expr
+  unique int id: @regex_literal_expr,
+  string pattern: string ref,
+  int version: int ref
 );
 
 reify_pack_exprs(  //dir=expr

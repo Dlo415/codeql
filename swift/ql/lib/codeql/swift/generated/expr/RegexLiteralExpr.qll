@@ -6,5 +6,13 @@ import codeql.swift.elements.expr.LiteralExpr
 module Generated {
   class RegexLiteralExpr extends Synth::TRegexLiteralExpr, LiteralExpr {
     override string getAPrimaryQlClass() { result = "RegexLiteralExpr" }
+
+    string getPattern() {
+      result = Synth::convertRegexLiteralExprToRaw(this).(Raw::RegexLiteralExpr).getPattern()
+    }
+
+    int getVersion() {
+      result = Synth::convertRegexLiteralExprToRaw(this).(Raw::RegexLiteralExpr).getVersion()
+    }
   }
 }

@@ -91,6 +91,8 @@ class ExprVisitor : public AstVisitorBase<ExprVisitor> {
   // in `VisitorBase`, or by doing a `const_cast` in `SwifDispatcher::fetchLabel`
   codeql::UnresolvedPatternExpr translateUnresolvedPatternExpr(swift::UnresolvedPatternExpr& expr);
 
+  codeql::RegexLiteralExpr translateRegexLiteralExpr(const swift::RegexLiteralExpr& expr);
+
  private:
   void fillAbstractClosureExpr(const swift::AbstractClosureExpr& expr,
                                codeql::AbstractClosureExpr& entry);

@@ -572,7 +572,9 @@ class ProtocolMetatypeToObjectExpr(ImplicitConversionExpr):
     pass
 
 class RegexLiteralExpr(LiteralExpr):
-    pass
+    pattern: string
+    version: int
+
 
 class SelfApplyExpr(ApplyExpr):
     base: Expr
