@@ -8,7 +8,7 @@
  * @scored
  * @problem.severity error
  * @security-severity 6.1
- * @id js/ml-powered/xss
+ * @id js/ml-powered/xss-old
  * @tags experimental security
  *       external/cwe/cwe-079
  */

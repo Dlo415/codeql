@@ -7,7 +7,7 @@
  * @scored
  * @problem.severity error
  * @security-severity 6.1
- * @id js/ml-powered/xss-through-dom
+ * @id js/ml-powered/xss
  * @tags experimental security
  *       external/cwe/cwe-079 external/cwe/cwe-116
  */
